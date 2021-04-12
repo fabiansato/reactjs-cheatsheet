@@ -87,3 +87,29 @@ const variableAMostrar = <h1>Bienvenido al curso {curso}</h1> return variableAMo
 }
 ```
 
+Todo el código JSX debe estar contenido dentro de una etiqueta
+Este código esta mal❌:
+```html
+<div>
+<p>Uno</p>
+</div>
+<div>
+<p>Dos</p>
+</div>
+```
+
+para ponerlo en JSD tenemos que tener 2 elementos div dentro de 1 solo div padre asi
+Este códdigo está bien🆗:
+```html
+<div>
+<div>
+<p>Uno</p>
+</div>
+<div>
+<p>Dos</p>
+</div>
+</div>
+
+```
+
+Aquí sí tenemos un único elemento padre, un único <div>
