@@ -1,6 +1,8 @@
 # reactjs-cheatsheet
+----------------------------------------
 
 # Instalación react globalmente
+----------------------------------------
 
 Hay que tener instalado Nodejs en nustra maquina.
 
@@ -8,9 +10,9 @@ y en nuestro terminal:
 ```
 npm install -g create-react-app
 ```
-
-# Inicializar proyecyo react
-```
+----------------------------------------
+# Inicializar proyecto react
+```----------------------------------------
 create-react-app <nombre de la aplicación>
 ```
 
@@ -24,19 +26,27 @@ ejecutar proyecto (dentro de la carpeta del proyecto):
 npm start
 ```
 
-#directorio ReactJS
+# directorio ReactJS
+
 ●	public: en la cual se encuentran los archivos que no son de programación (html, imágenes)
+
 ●	src: en la cual se encuentra todo nuestro proyecto. Todo aquello que programaremos en nuestro proyecto (archivos JS con los componentes, archivos de estilos)
+
 
 index.html
 solo contiene:
-npm start
+
+
 ```html
 <div id="root"></div>
-npm start
 ```
-index.js
+
+Inicializamos el proyecto con ```npm start```
+
+## index.js
+
 Es el punto de entrada de JavaScript para el proyecto React. Este archivo se encarga de mostrar el componente App.js en el <div id=”root”></div> del archivo HTML principal
+
 ```javascript
 import App from './App';
 ReactDOM.render(<App />, document.getElementById('root'));
