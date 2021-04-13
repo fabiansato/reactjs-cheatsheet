@@ -53,9 +53,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 archivo app.js:
-
-import './App.css';
 ```javascript
+import './App.css';
+
 function App() { return (
 <div className="App">
 <h1>Mi primer aplicación React</h1>
@@ -109,7 +109,7 @@ Este código esta mal❌:
 </div>
 ```
 
-para ponerlo en JSD tenemos que tener 2 elementos div dentro de 1 solo div padre asi
+para ponerlo en JSX tenemos que tener 2 elementos div dentro de 1 solo div padre asi
 Este códdigo está bien🆗:
 ```html
 <div>
@@ -166,6 +166,52 @@ return (
 
 Se considera que el archivo “primerComponente.jsx” se encuentra en la misma carpeta que App.js
 
+----------------------------
+## Return de la función
+----------------------------
+### SIN ELEMENTO CONTENEDOR
 
+```avascript
+ejemplo:
+return (
+<React.Fragment>
+<td>Hello</td>
+<td>World</td>
+</React.Fragment>
+);
 
- 
+```
+otra forma sin elemento:
+```javascript
+return (
+<>
+<td>Hello</td>
+<td>World</td>
+</>
+);
+
+```
+
+-------------------------------------------
+# Comunicación en entre componentes
+-------------------------------------------
+
+Componentes que podamos cambiar su comportamiento
+
+Comencemos con la llamada a un componente llamado PrimerComponente cuya función es mostrar el nombre que le pasamos como parámetro.
+
+Llamada al componente HTML:
+```html
+    <PrimerComponente name="Fabian" />
+```
+
+```javascript
+import React from 'react';
+
+export default function PrimerComponente(props) { return (
+<h1>Hola {props.name}</h1>
+)
+}
+
+```
+
