@@ -67,8 +67,9 @@ export default App;
 ```
 El “return” de la función es el encargado de generar la Interfaz del componente.
 
-
+-------------------------------
 # JSX
+-------------------------------
 Es una extensión de la sintaxis de JavaScript con la cual se generan las interfaces gráficas en React.
 JSX permite “mezclar” código HTML con código JavaScript. Por ejemplo, permite asignar un fragmento HTML a una variable JavaScript y luego mostrar dicha variable.
 
@@ -123,3 +124,47 @@ Este códdigo está bien🆗:
 ```
 
 Aquí sí tenemos un único elemento padre, un único <div>
+  
+ --------------------------
+ # Componentes
+ --------------------------
+ 
+ Son fragmentos visuales de la página web
+
+ # Creación de componentes
+ 
+ ## Paso 1 : Creamos un archivo con el nombre del componente con extensión jsx
+ 
+ ejemplo: primerComponente.jsx
+ 
+ ## Paso 2 : Escrubunis el codigo del componente. (componentes basados en funciones o clases)
+ ejemplo:
+ 
+```javascript
+import './App.css'; import React from 'react';
+
+export default function PrimerComponente() { const name = 'Fabian Gonzalez';
+const element = <h1>Hola {name}</h1>; return element;
+}
+
+Obligatoriamente tiene que tener un return
+
+
+```
+
+En este otro ejemplo utilizaremos una función que incluye el componente que acabamos de crear.
+```javascript
+import PrimerComponente from './primerComponente'; export default function App() {
+return (
+<div className="App">
+<PrimerComponente />
+</div>
+)
+}
+
+```
+
+Se considera que el archivo “primerComponente.jsx” se encuentra en la misma carpeta que App.js
+
+
+ 
