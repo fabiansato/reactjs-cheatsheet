@@ -171,16 +171,18 @@ Se considera que el archivo “primerComponente.jsx” se encuentra en la misma 
 ----------------------------
 ### SIN ELEMENTO CONTENEDOR
 
-```avascript
 ejemplo:
+
+```javascript
+
 return (
 <React.Fragment>
 <td>Hello</td>
 <td>World</td>
 </React.Fragment>
 );
-
 ```
+
 otra forma sin elemento:
 ```javascript
 return (
@@ -214,4 +216,56 @@ export default function PrimerComponente(props) { return (
 }
 
 ```
+
+El parámetro (atributo) es name, por lo que para poder acceder a dicho parámetro hacemos uso de props.name.
+
+Nada nos impide de llamar al componente varias veces en nuestra aplicación, por ejemplo de la siguiente forma:
+
+
+```javascript
+return (
+<div className="App">
+<PrimerComponente name="Juan Carlos" />
+<PrimerComponente name="Maria" />
+<PrimerComponente name="Victoria" />
+</div>
+)
+```
+De esta forma, se llamará al componente 3 veces, la primera vez el parámetro name
+tendrá como valor Juan Carlos, la segunda vez Maria, y por último el valor Victoria. Esto provocará que el componente se muestre 3 veces en la aplicación.
+
+
+## Uso de vectores
+
+```javascript
+const vectorNombres = [ 'Juan Carlos', 'Maria',
+'Gerardo'
+];
+```
+
+El método map, permite convertir los elementos de un vector, a otro formato, para el ejemplo que estamos realizando convertiremos los elementos del vector en componentes React, más precisamente en componentes PrimerComponente, y cada uno de estos componentes recibirán como parámetro el nombre de la persona que debe mostrar.
+
+```javascript
+const vectorNombres = [ 'Juan Carlos', 'Maria',
+'Gerardo'
+];
+
+const respuesta = vectorNombres.map(unItem => { return <PrimerComponente name={unItem} />
+})
+
+return (
+<div className="App">
+{respuesta}
+</div>
+)
+```
+
+●	Recorreremos vectorNombres y por cada elemento
+○	Convertiremos el nombre al componente PrimerComponente pasándole como parámetro el nombre de la persona (elemento del vector)
+○	Cada	elemento	del	vector	nuevo	(vector	de PrimerComponente) se almacena en la variable respuesta
+●	Mostramos la variable respuesta (el vector de componentes)
+
+
+
+
 
