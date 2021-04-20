@@ -1,3 +1,8 @@
+Un framework tenes que adaptarte a sus reglas, react es una librería donde somos libres de usar lo que queremos.
+reactjs es creado por Facebook.
+anular atrás está google
+vue atrás es opensource.
+
 # reactjs-cheatsheet
 ----------------------------------------
 
@@ -66,6 +71,8 @@ function App() { return (
 export default App;
 ```
 El “return” de la función es el encargado de generar la Interfaz del componente.
+
+
 
 -------------------------------
 # JSX
