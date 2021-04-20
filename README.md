@@ -261,8 +261,11 @@ return (
 ```
 
 ●	Recorreremos vectorNombres y por cada elemento
+
 ○	Convertiremos el nombre al componente PrimerComponente pasándole como parámetro el nombre de la persona (elemento del vector)
+
 ○	Cada	elemento	del	vector	nuevo	(vector	de PrimerComponente) se almacena en la variable respuesta
+
 ●	Mostramos la variable respuesta (el vector de componentes)
 
 
